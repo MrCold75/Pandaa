@@ -49,10 +49,10 @@ const Dashboard = () => {
           <Card>
             <h3 className="text-xl font-semibold mb-4">⭐ Ma réputation</h3>
             <div className="text-3xl font-bold text-primary mb-2">
-              {user.average_rating.toFixed(1)} / 5.0
+              {user?.average_rating?.toFixed(1) || '0.0'} / 5.0
             </div>
             <p className="text-gray-600">
-              {user.total_ratings} évaluation{user.total_ratings > 1 ? 's' : ''}
+              {user?.total_ratings || 0} évaluation{user?.total_ratings > 1 ? 's' : ''}
             </p>
           </Card>
         )}
